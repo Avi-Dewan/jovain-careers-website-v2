@@ -10,22 +10,31 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   
   <body>
+    {% include 'nav.html' %}
+
+    <img class="img-fluid"  id ="banner" src = "https://jovian-careers-website--avi-dewan.repl.co/static/banner.jpg" >
 
     <div class = "container">
       
     
       <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-      <img class="img-fluid"  id ="banner" src = "https://jovian-careers-website--avi-dewan.repl.co/static/banner.jpg" >
+      
       
       <h2  class="text-center  mt-4 mb-4">About Jovian</h2>
-      
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra, nisl auctor pulvinar tempus, justo turpis tristique risus, sit amet ultrices enim turpis nec diam. Aenean vel odio est. Donec quis ipsum id nibh bibendum vulputate. Aliquam vitae turpis non neque lobortis lacinia. Duis sollicitudin enim sed erat aliquet, gravida lobortis felis hendrerit. Pha sellus finibus quam id ante accumsan, at porttitor sapien luctus. Morbi vehicula eu diam iaculis dictum. Morbi varius lorem eget nisl vestibulum maximus.Donec dignissim tellus sed magna suscipit, sit amet porttitor lorem convallis. Donec at pellentesque sapien. Morbi viverra posuere nisi tincidunt vestibulum. Sed mollis eu nunc id posuere. Phasellus justo tellus, tempus non malesuada rutrum, vestibulum sit amet dui. Curabitur lacinia enim non sapien pharetra, sed imperdiet quam faucibus.</p>
-  
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra, nisl auctor pulvinar tempus, justo turpis tristique risus, sit amet ultrices enim turpis nec diam. Aenean vel odio est. Donec quis ipsum i dictum. Morbi varius lorem eget nisl vestibulum maximus.Donec dignissim tellus sed magna suscipit, sit amet porttitor lorem convallis. Donec at pellentesque sapien. Morbi viverra posuere nisi .</p>
+        </div>
+        <div class = "d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
       <h2  class="text-center  mt-4 mb-4">Job Openings</h2>
       
       <p>
@@ -35,11 +44,12 @@
       </p>
 
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2022, Jovian</p>
+        <a href = "mailto:hello@jovian.ai?subject=Question%20about%20Job%20openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%20%3Center%20your%20question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
 
     </div>
+
+    {% include 'footer.html' %}
     
   </body>
 </html>
