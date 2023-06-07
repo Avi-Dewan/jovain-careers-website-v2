@@ -19,17 +19,18 @@ def load_jobs_from_db():
       job_dict = dict(zip(column_names, row))
       jobs.append(job_dict)
     return jobs
-
-
+      
 def load_job_from_db(id):
   with engine.connect() as conn:
     result = conn.execute(
-      text("SELECT * FROM jobs WHERE id = :val"),
-      val=id
+      text(f"SELECT * FROM jobs WHERE id = :val"),
+      {"val": id}
     )
     rows = result.all()
-    column_names = result.keys()
     if len(rows) == 0:
       return None
     else:
-      return dict(zip(column_names,rows[0]))
+      return dict(zip(result.keys(), rows[0]))
+
+
+
