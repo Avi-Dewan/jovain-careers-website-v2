@@ -28,7 +28,8 @@ def load_job_from_db(id):
       val=id
     )
     rows = result.all()
+    column_names = result.keys()
     if len(rows) == 0:
       return None
     else:
-      return dict(rows[0])
+      return dict(zip(column_names,rows[0]))
