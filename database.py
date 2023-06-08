@@ -32,6 +32,3 @@ def load_job_from_db(id):
     else:
       return dict(zip(result.keys(), rows[0]))
 
-
-print(load_job_from_db(1))
-
